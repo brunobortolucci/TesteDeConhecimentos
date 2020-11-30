@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Web.Database.Clientes>
+
+@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<h1>Página Inicial</h1>
+
+<h3>Para Scaffold acesse /Cliente</h3>
+</br>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+        </tr>
+    </thead>
+    <tbody>            
+        @foreach (var cliente in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(clienteItem => cliente.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(clienteItem => cliente.Nome)
+                </td>
+            </tr>                
+        }
+    </tbody>
+</table>
